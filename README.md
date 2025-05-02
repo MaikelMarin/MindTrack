@@ -30,23 +30,17 @@
 
 ---
 
-## 📦 Estructura del proyecto
-mindtrack/
-├── ui/ # Pantallas y componentes UI
-├── data/ # Repositorios, Room, Firebase, DataStore
-├── domain/ # Casos de uso y modelos de dominio
-├── di/ # Módulos de Hilt
-├── utils/ # Funciones y constantes compartidas
+## 🏗️ Estructura del proyecto
 
+```
 MindTrack/
 ├── app/
-│ ├── presentation/ ← UI y lógica de interfaz (Compose)
-│ ├── domain/ ← Casos de uso y modelos de dominio
-│ ├── data/ ← Repositorios, DAOs, Room, Firebase, DataStore
-│ ├── di/ ← Módulos de Hilt
-│ └── utils/ ← Clases de utilidad # Funciones y constantes compartidas
-├── MainActivity.kt
-└── build.gradle
+│   ├── presentation/    ← UI y lógica de interfaz (Compose)
+│   ├── domain/          ← Casos de uso y modelos de dominio
+│   ├── data/            ← Repositorios, DAOs, Room, Firebase, DataStore
+│   ├── di/              ← Módulos de Hilt
+│   └── utils/           ← Clases de utilidad, funciones y constantes compartidas
+```
 
 ---
 
