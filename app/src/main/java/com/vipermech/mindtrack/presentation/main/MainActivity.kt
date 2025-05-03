@@ -8,8 +8,9 @@ import androidx.compose.material3.Surface
 import androidx.core.view.WindowCompat
 import com.vipermech.mindtrack.ui.navigation.MindTrackNavHost
 import com.vipermech.mindtrack.ui.theme.MindTrackTheme
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
