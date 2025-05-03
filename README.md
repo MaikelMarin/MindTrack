@@ -57,7 +57,7 @@ MindTrack/
 
 ## 📦 Requisitos
 
-- Android Studio Electric Eel o superior
+- Android Studio Meerkat o superior
 - JDK 17
 - Cuenta de Firebase configurada
 - Dispositivo o emulador con Android 8+
@@ -78,7 +78,8 @@ MindTrack/
 
 ## 🛣️ Roadmap
 
-- [ ] Setup inicial del proyecto
+- [ x ] Setup inicial del proyecto
+- [ ] Configurar Firebase en el proyecto
 - [ ] Navegación con Jetpack Navigation
 - [ ] UI básica para registrar emociones
 - [ ] Implementar Firestore Sync
