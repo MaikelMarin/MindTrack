@@ -1,4 +1,4 @@
-package com.vipermech.mindtrack.presentation.theme
+package com.vipermech.mindtrack.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

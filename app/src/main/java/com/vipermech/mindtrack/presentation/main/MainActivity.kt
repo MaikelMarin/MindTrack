@@ -1,4 +1,4 @@
-package com.vipermech.mindtrack.ui.main
+package com.vipermech.mindtrack.presentation.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -6,8 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.material3.Surface
 import androidx.core.view.WindowCompat
-import com.vipermech.mindtrack.ui.navigation.MindTrackNavHost
-import com.vipermech.mindtrack.ui.theme.MindTrackTheme
+import com.vipermech.mindtrack.presentation.ui.navigation.MindTrackNavHost
+import com.vipermech.mindtrack.presentation.ui.theme.MindTrackTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

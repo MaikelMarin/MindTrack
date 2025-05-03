@@ -1,11 +1,11 @@
-package com.vipermech.mindtrack.ui.navigation
+package com.vipermech.mindtrack.presentation.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.vipermech.mindtrack.ui.navigation.home.HOME_ROUTE
-import com.vipermech.mindtrack.ui.navigation.home.homeScreen
+import com.vipermech.mindtrack.presentation.ui.navigation.home.HOME_ROUTE
+import com.vipermech.mindtrack.presentation.ui.navigation.home.homeScreen
 
 @Composable
 fun MindTrackNavHost(

@@ -1,8 +1,8 @@
-package com.vipermech.mindtrack.ui.navigation.home
+package com.vipermech.mindtrack.presentation.ui.navigation.home
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
-import com.vipermech .mindtrack.ui.screens.home.HomeScreen
+import com.vipermech.mindtrack.presentation.ui.screens.home.HomeScreen
 
 const val HOME_ROUTE = "home"
 

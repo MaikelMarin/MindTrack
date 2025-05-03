@@ -78,7 +78,7 @@ MindTrack/
 
 ## 🛣️ Roadmap
 
-- [ x ] Setup inicial del proyecto
+- [x] Setup inicial del proyecto
 - [ ] Configurar Firebase en el proyecto
 - [ ] Navegación con Jetpack Navigation
 - [ ] UI básica para registrar emociones
