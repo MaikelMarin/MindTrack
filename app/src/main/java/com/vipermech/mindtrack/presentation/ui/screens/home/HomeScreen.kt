@@ -5,22 +5,21 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavHostController
+import com.vipermech.mindtrack.presentation.ui.componets.BottomNavigationBar
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen() {
+fun HomeScreen(navController: NavHostController) {
+
     Scaffold(
-        topBar = {
-            TopAppBar(title = { Text("MindTrack") })
-        }
-    ) { innerPadding ->
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding),
-            contentAlignment = Alignment.Center
-        ) {
-            Text("Bienvenido a MindTrack 🎯")
+        bottomBar = { BottomNavigationBar(navController) }
+    ){
+        Box(Modifier.fillMaxSize().padding(it), contentAlignment = Alignment.Center) {
+            Text(text = "home")
         }
     }
+
+
+
+
 }

@@ -22,10 +22,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.vipermech.mindtrack" />
+                  <option name="mobileSdkAppId" value="1:939922470746:android:b66fe212bb8336b2346563" />
+                  <option name="projectId" value="mindtrack-f8f69" />
+                  <option name="projectNumber" value="939922470746" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
