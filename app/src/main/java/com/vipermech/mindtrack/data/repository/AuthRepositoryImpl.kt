@@ -1,5 +1,6 @@
 package com.vipermech.mindtrack.data.repository
 
+import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseUser
 import com.vipermech.mindtrack.data.firebase.FirebaseAuthSource
 import com.vipermech.mindtrack.domain.repository.AuthRepository
@@ -18,6 +19,18 @@ class AuthRepositoryImpl @Inject constructor(private val source: FirebaseAuthSou
         return source.register(email,password)
     }
 
+    override fun sendEmailVerification(user: FirebaseUser): Task<Void> {
+        return source.sendEmailVerification(user)
+    }
+
+    override suspend fun forgotPassword(email: String): Result<Boolean> {
+        return source.forgotPassword(email)
+    }
+
+    fun deleteAccount(user: FirebaseUser): Task<Void> {
+        return source.deleteAccount(user)
+    }
+
     override fun logout() {
         source.logout()
     }
@@ -25,5 +38,7 @@ class AuthRepositoryImpl @Inject constructor(private val source: FirebaseAuthSou
     override fun currentUser(): FirebaseUser? {
         return source.currentUser()
     }
+
+
 
 }

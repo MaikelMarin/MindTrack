@@ -79,9 +79,11 @@ MindTrack/
 ## 🛣️ Roadmap
 
 - [x] Setup inicial del proyecto
-- [ ] Configurar Firebase en el proyecto
-- [ ] Navegación con Jetpack Navigation
-- [ ] UI básica para registrar emociones
+- [x] Configurar Firebase en el proyecto
+- [x] Navegación con Jetpack Navigation
+- [ ] Almacenamiento de datos con Room
+- [ ] Autenticación con Google(Optional)
+- [ ] UI con Jetpack Compose
 - [ ] Implementar Firestore Sync
 - [ ] Crear dashboard con gráficas
 - [ ] Exportar estadísticas (PDF/CSV)

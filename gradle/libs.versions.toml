@@ -11,6 +11,7 @@ hiltAndroid = "2.56.2"
 hiltAndroidVersion = "2.51"
 hiltCompiler = "2.56.1"
 hiltNavigationCompose = "1.2.0"
+jetbrainsKotlinxSerializationJson = "1.6.0"
 junitJupiterApi = "5.11.0"
 junitJupiterEngine = "5.11.0"
 kotlin = "2.0.21"
@@ -20,6 +21,7 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 kotlinxCoroutinesAndroid = "1.7.3"
 kotlinxSerializationJson = "1.7.3"
+kotlinxSerializationJsonVersion = "1.6.2"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.1"
 composeBom = "2025.04.01"
@@ -75,6 +77,8 @@ junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.re
 junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junitJupiterEngine" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+kotlinx-serialization-json-v160 = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "jetbrainsKotlinxSerializationJson" }
+kotlinx-serialization-json-v162 = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJsonVersion" }
 material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
 mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }

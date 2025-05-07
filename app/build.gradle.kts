@@ -7,7 +7,8 @@ plugins {
     id("dagger.hilt.android.plugin")
     id("com.google.gms.google-services")
     kotlin("kapt")
-    kotlin("plugin.serialization") version "2.0.21"
+
+    kotlin("plugin.serialization") version "2.1.20"
 }
 
 android {
@@ -74,7 +75,6 @@ dependencies {
     implementation(libs.androidx.credentials)
     implementation(libs.androidx.credentials.play.services.auth)
     implementation(libs.googleid)
-    implementation(libs.firebase.ui.auth)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
