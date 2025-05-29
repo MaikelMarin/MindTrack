@@ -100,6 +100,7 @@ MindTrack/
 - [ ] Autenticación con Google(Optional)
 - [ ] Implementar Firestore Sync
 - [ ] Exportar estadísticas (PDF/CSV)
+- [ ] Testing con JUnit y MockK
 - [ ] Publicar en Play Store
 
 ---
