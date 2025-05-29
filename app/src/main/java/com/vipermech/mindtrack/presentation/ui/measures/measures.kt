@@ -7,6 +7,9 @@ import androidx.compose.ui.unit.dp
 // @version 1.0.0
 // File contend with measures of the components of UI.
 
+//Size icon app default
+val iconSizeDefault = 128.dp
+
 //Padding value default
 val paddingDefault = 10.dp
 

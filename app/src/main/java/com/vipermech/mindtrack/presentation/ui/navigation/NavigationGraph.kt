@@ -8,7 +8,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.vipermech.mindtrack.presentation.ui.navigation.routesnav.NavigationItems
-import com.vipermech.mindtrack.presentation.ui.navigation.routesnav.NavigationItemsBottomBar
+import com.vipermech.mindtrack.presentation.ui.navigation.routesnav.NavigationItemsStart
 import com.vipermech.mindtrack.presentation.ui.screens.auth.LoginScreen
 import com.vipermech.mindtrack.presentation.ui.screens.emotions.EmotionsScreen
 import com.vipermech.mindtrack.presentation.ui.screens.home.HomeScreen
@@ -19,24 +19,23 @@ import com.vipermech.mindtrack.presentation.ui.screens.tasks.TasksScreen
 @Composable
 fun NavigationGraph(
     navController: NavHostController = rememberNavController(),
-    startDestination: String = NavigationItems.Login.route,
+    startDestination: String = NavigationItemsStart.Login.route,
     modifier: Modifier,
 ) {
     NavHost(
         navController = navController,
         startDestination = startDestination
     ) {
-        composable(NavigationItems.Login.route) {
-            LoginScreen(viewModel = hiltViewModel()) {
-            // Successful login navigation to Home
-            navController.navigate(NavigationItemsBottomBar.Home.route) {
-                popUpTo(NavigationItems.Login) { inclusive = true }
+        composable(NavigationItemsStart.Login.route) {
+            LoginScreen(viewModel = hiltViewModel()){
+            navController.navigate(NavigationItems.Home.route) {
+                navController.popBackStack(NavigationItemsStart.Login.route, inclusive = true)
             }
         } }
-        composable(NavigationItemsBottomBar.Home.route) { HomeScreen(navController) }
-        composable(NavigationItemsBottomBar.Tasks.route) { TasksScreen() }
-        composable(NavigationItemsBottomBar.Emotion.route) { EmotionsScreen() }
-        composable(NavigationItemsBottomBar.Stats.route) { StatisticsScreen() }
-        composable(NavigationItemsBottomBar.Settings.route) { SettingsScreen() }
+        composable(NavigationItems.Home.route){}
+        composable(NavigationItems.Tasks.route) { TasksScreen() }
+        composable(NavigationItems.Emotion.route) { EmotionsScreen() }
+        composable(NavigationItems.Stats.route) { StatisticsScreen() }
+        composable(NavigationItems.Settings.route) { SettingsScreen() }
     }
 }

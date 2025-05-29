@@ -28,7 +28,6 @@ class FirebaseAuthSource @Inject constructor(auth: FirebaseAuth) {
 
     suspend fun register(email: String, password: String): Result<FirebaseUser> =
         withContext(Dispatchers.IO) {
-
             try {
                 val result = auth.createUserWithEmailAndPassword(email, password).await()
                 Result.success(result.user!!)
@@ -38,13 +37,9 @@ class FirebaseAuthSource @Inject constructor(auth: FirebaseAuth) {
         }
 
 
-    fun sendEmailVerification(user: FirebaseUser): Task<Void> = user.sendEmailVerification().addOnCompleteListener {
-        if (it.isSuccessful) {
-            Result.success(true)
-        } else {
-            Result.failure(it.exception!!)
-        }
-    }
+    fun sendEmailVerification(user: FirebaseUser): Result<Boolean> =
+        if (user.sendEmailVerification().isSuccessful) Result.success(true)
+        else Result.failure(Exception("Failed to send email verification"))
 
     fun logout() = auth.signOut()
 
@@ -57,13 +52,7 @@ class FirebaseAuthSource @Inject constructor(auth: FirebaseAuth) {
         Result.failure(e)
     }
 
-    fun deleteAccount(user: FirebaseUser): Task<Void> = user.delete().addOnCompleteListener {
-        if (it.isSuccessful) {
-            Result.success(true)
-        } else {
-            Result.failure(it.exception!!)
-        }
-    }
-
-
+    fun deleteAccount(user: FirebaseUser): Result<Boolean> =  if (user.delete().isSuccessful) Result.success(true) else Result.failure(Exception("Failed to delete account"))
 }
+
+

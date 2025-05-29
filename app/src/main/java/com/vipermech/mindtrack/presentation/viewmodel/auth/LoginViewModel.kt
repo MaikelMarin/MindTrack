@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseUser
 import com.vipermech.mindtrack.domain.repository.AuthRepository
-import com.vipermech.mindtrack.presentation.ui.state.LoginUiState
+import com.vipermech.mindtrack.presentation.ui.state.AuthUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -15,8 +15,8 @@ import javax.inject.Inject
 @HiltViewModel
 class LoginViewModel @Inject constructor(private val repository: AuthRepository) : ViewModel() {
 
-    private val _uiState = MutableStateFlow(LoginUiState())
-    val uiState: StateFlow<LoginUiState> = _uiState.asStateFlow()
+    private val _uiState = MutableStateFlow(AuthUiState())
+    val uiState: StateFlow<AuthUiState> = _uiState.asStateFlow()
 
     private val _user = MutableStateFlow<FirebaseUser?>(null)
     val user = _user.asStateFlow()
@@ -27,14 +27,14 @@ class LoginViewModel @Inject constructor(private val repository: AuthRepository)
                 val result = repository.login(email, password)
                 result
                     .onSuccess {
-                        _uiState.emit(LoginUiState(user = it, error = null))
+                        _uiState.emit(AuthUiState(user = it, error = null))
                         _user.emit(it)
                     }
                     .onFailure {
-                        _uiState.emit(LoginUiState(error = it.message))
+                        _uiState.emit(AuthUiState(error = it.message))
                     }
             } catch (e: Exception) {
-                _uiState.emit(LoginUiState(error = e.message))
+                _uiState.emit(AuthUiState(error = e.message))
             }
         }
     }
@@ -43,19 +43,15 @@ class LoginViewModel @Inject constructor(private val repository: AuthRepository)
         // Implement registration logic here
     }
 
-    fun sendEmailVerification() {
-        // Implement email verification logic here
-    }
-
-
-
+/*
     fun logout() {
         viewModelScope.launch {
             repository.logout()
-            _uiState.emit(LoginUiState())  // Reset state after logout
+            _uiState.emit(AuthUiState())  // Reset state after logout
             _user.emit(null)  // Clear the user state
         }
     }
+*/
 
     fun forgotPassword(email: String) {
         //Logic for forgot password

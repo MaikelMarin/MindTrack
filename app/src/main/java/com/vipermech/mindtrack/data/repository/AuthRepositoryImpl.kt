@@ -19,7 +19,7 @@ class AuthRepositoryImpl @Inject constructor(private val source: FirebaseAuthSou
         return source.register(email,password)
     }
 
-    override fun sendEmailVerification(user: FirebaseUser): Task<Void> {
+    override fun sendEmailVerification(user: FirebaseUser): Result<Boolean> {
         return source.sendEmailVerification(user)
     }
 
@@ -27,7 +27,7 @@ class AuthRepositoryImpl @Inject constructor(private val source: FirebaseAuthSou
         return source.forgotPassword(email)
     }
 
-    fun deleteAccount(user: FirebaseUser): Task<Void> {
+    override suspend fun deleteAccount(user: FirebaseUser): Result<Boolean> {
         return source.deleteAccount(user)
     }
 

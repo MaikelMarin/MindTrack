@@ -10,16 +10,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.vipermech.mindtrack.presentation.ui.navigation.routesnav.NavigationItemsBottomBar
+import com.vipermech.mindtrack.presentation.ui.navigation.routesnav.NavigationItems
 
 @Composable
 fun BottomNavigationBar(navController: NavHostController) {
     val items = listOf(
-        NavigationItemsBottomBar.Home,
-        NavigationItemsBottomBar.Tasks,
-        NavigationItemsBottomBar.Emotion,
-        NavigationItemsBottomBar.Stats,
-        NavigationItemsBottomBar.Settings
+        NavigationItems.Home,
+        NavigationItems.Tasks,
+        NavigationItems.Emotion,
+        NavigationItems.Stats,
+        NavigationItems.Settings
     )
 
     NavigationBar(

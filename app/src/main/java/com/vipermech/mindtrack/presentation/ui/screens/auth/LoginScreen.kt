@@ -12,9 +12,13 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import com.vipermech.mindtrack.presentation.viewmodel.auth.LoginViewModel
 import androidx.compose.runtime.collectAsState
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.vectorResource
 import com.vipermech.mindtrack.R
+import com.vipermech.mindtrack.presentation.ui.measures.iconSizeDefault
 import com.vipermech.mindtrack.presentation.ui.measures.paddingDefault
 import com.vipermech.mindtrack.presentation.ui.measures.spaceComponentsMedium
 import com.vipermech.mindtrack.presentation.ui.measures.spaceComponentsSmall
@@ -32,8 +36,8 @@ fun LoginScreen(
     val uiState by viewModel.uiState.collectAsState()
 
     LaunchedEffect(user) {
-        if (uiState.user != null) {
-            onLoginSuccess()
+       if (uiState.user != null) {
+           onLoginSuccess()
         }
     }
 
@@ -45,7 +49,7 @@ fun LoginScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        Image( painter = painterResource(id = R.drawable.ic_launcher_background), contentDescription = nameApp)
+        Image(modifier = Modifier.size(iconSizeDefault), painter = painterResource(id = R.drawable.logo), contentDescription = nameApp)
         Spacer(modifier = Modifier.height(spaceComponentsMedium))
         Text(color = MaterialTheme.colorScheme.onBackground, text = "Iniciar sesión", style = MaterialTheme.typography.headlineMedium)
         Spacer(modifier = Modifier.height(spaceComponentsMedium))

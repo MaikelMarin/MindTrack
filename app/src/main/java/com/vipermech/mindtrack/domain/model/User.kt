@@ -1,4 +1,6 @@
 package com.vipermech.mindtrack.domain.model
 
-class User {
-}
+data class User(
+    val uid: String,
+    val email: String
+)

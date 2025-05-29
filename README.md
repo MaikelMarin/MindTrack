@@ -80,12 +80,25 @@ MindTrack/
 
 - [x] Setup inicial del proyecto
 - [x] Configurar Firebase en el proyecto
-- [x] Navegación con Jetpack Navigation
-- [ ] Almacenamiento de datos con Room
-- [ ] Autenticación con Google(Optional)
 - [ ] UI con Jetpack Compose
+- [ ] Screen de inicio de sesión(Registro, Recuperar contraseña, Login)
+- [ ] Screens de inicio, tareas, emociones, estadísticas y ajustes
+- [ ] Dashboard con gráficas
+- [ ] Navegación con Jetpack Navigation
+- [ ] Navegación entre pantallas del ContainerScreeens con Jetpack Navigation
+- [ ] Pasar datos entre pantallas con  las rutas de navegación
+- [x] Casos de uso para el Login, Registro, Recuperar contraseña, Verificación de correo electrónico, Borrar cuenta, Salir de sesión
+- [x] Autenticación con Firebase
+- [ ] Registro de Usuarios con Firebase
+- [ ] Verifiación de correo electrónico
+- [ ] Recuperar contraseña
+- [ ] Borrar cuenta
+- [ ] Salir de sesión
+- [ ] Almacenamiento de datos de inicio de sesión en Firebase
+- [ ] Almacenamiento de datos con Room
+- [ ] Sincronización entre Firebase y datos locales.
+- [ ] Autenticación con Google(Optional)
 - [ ] Implementar Firestore Sync
-- [ ] Crear dashboard con gráficas
 - [ ] Exportar estadísticas (PDF/CSV)
 - [ ] Publicar en Play Store
 

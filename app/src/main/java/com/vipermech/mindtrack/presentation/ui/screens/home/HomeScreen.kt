@@ -9,14 +9,10 @@ import androidx.navigation.NavHostController
 import com.vipermech.mindtrack.presentation.ui.componets.BottomNavigationBar
 
 @Composable
-fun HomeScreen(navController: NavHostController) {
+fun HomeScreen(navController: NavHostController, list: List<String>) {
 
-    Scaffold(
-        bottomBar = { BottomNavigationBar(navController) }
-    ){
-        Box(Modifier.fillMaxSize().padding(it), contentAlignment = Alignment.Center) {
-            Text(text = "home")
-        }
+    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        Text(text = list.listIterator().next())
     }
 
 

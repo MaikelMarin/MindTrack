@@ -2,13 +2,12 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    id("com.google.devtools.ksp")
+    id("com.google.devtools.ksp") version "2.1.21-2.0.1"
     id("com.google.dagger.hilt.android")
-    id("dagger.hilt.android.plugin")
     id("com.google.gms.google-services")
-    kotlin("kapt")
-
+    id ("kotlin-parcelize")
     kotlin("plugin.serialization") version "2.1.20"
+
 }
 
 android {
@@ -57,10 +56,9 @@ android {
 }
 
 dependencies {
-
-
-
-
+    implementation(libs.gitlive.firebase.auth)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
     implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose)
     ksp(libs.hilt.android.compiler)
@@ -70,6 +68,7 @@ dependencies {
     implementation(libs.androidx.datastore)
     implementation(libs.androidx.datastore.preferences)
     implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.database)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.analytics)
     implementation(libs.androidx.credentials)
@@ -78,6 +77,7 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.core.splashscreen)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
