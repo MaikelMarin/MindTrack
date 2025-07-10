@@ -9,10 +9,6 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.navigation.NamedNavArgument
-import androidx.navigation.NavType
-import androidx.navigation.navArgument
-import kotlinx.parcelize.Parcelize
 import kotlinx.serialization.Serializable
 
 
@@ -24,8 +20,7 @@ sealed class NavigationItems(val route: String, val icon: ImageVector, val label
     object Settings : NavigationItems("settings", Icons.Default.Settings, "Ajustes")
 }
 
-@Serializable
+
 sealed class NavigationItemsStart(val route: String)  {
-    @Serializable
     object Login : NavigationItemsStart("Login")
 }

@@ -8,8 +8,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.vipermech.mindtrack.presentation.ui.navigation.routesnav.NavigationItems
+import com.vipermech.mindtrack.presentation.ui.navigation.routesnav.NavigationItemsContainer
 import com.vipermech.mindtrack.presentation.ui.navigation.routesnav.NavigationItemsStart
 import com.vipermech.mindtrack.presentation.ui.screens.auth.LoginScreen
+import com.vipermech.mindtrack.presentation.ui.screens.containe.ContainerUI
 import com.vipermech.mindtrack.presentation.ui.screens.emotions.EmotionsScreen
 import com.vipermech.mindtrack.presentation.ui.screens.home.HomeScreen
 import com.vipermech.mindtrack.presentation.ui.screens.settings.SettingsScreen
@@ -28,14 +30,15 @@ fun NavigationGraph(
     ) {
         composable(NavigationItemsStart.Login.route) {
             LoginScreen(viewModel = hiltViewModel()){
-            navController.navigate(NavigationItems.Home.route) {
+                navController.navigate(NavigationItems.Container.route) {
                 navController.popBackStack(NavigationItemsStart.Login.route, inclusive = true)
             }
         } }
-        composable(NavigationItems.Home.route){}
-        composable(NavigationItems.Tasks.route) { TasksScreen() }
-        composable(NavigationItems.Emotion.route) { EmotionsScreen() }
-        composable(NavigationItems.Stats.route) { StatisticsScreen() }
-        composable(NavigationItems.Settings.route) { SettingsScreen() }
+        composable(NavigationItems.Container.route){ContainerUI(navController)}
+        composable(NavigationItemsContainer.Home.route){ HomeScreen(navController) }
+        composable(NavigationItemsContainer.Tasks.route) { TasksScreen() }
+        composable(NavigationItemsContainer.Emotion.route) { EmotionsScreen() }
+        composable(NavigationItemsContainer.Stats.route) { StatisticsScreen() }
+        composable(NavigationItemsContainer.Settings.route) { SettingsScreen() }
     }
 }
